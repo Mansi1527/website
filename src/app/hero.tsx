@@ -29,11 +29,7 @@ const Hero = () => {
             color:"#f8e112",
             textShadow:"0px 0px 8px rgb(255,255,255)",
             boxShadow:"0px 0px 8px rgb(255,255,255)",
-            transition:{
-                repeat:Infinity,
-                repeatType:"reverse",
-                duration:0.4
-            }
+            
         },
         
     }
@@ -53,7 +49,9 @@ const Hero = () => {
         <Link href="/ques">
         <motion.button 
         variants={buttonVariants}
-        
+        transition={{ repeat:Infinity,
+            repeatType:"reverse",
+            duration:0.4}}
         whileHover="hover" 
         className='bg-white bg-gradient-to-tr text-3xl from-white via-pink-300 to-white px-10 py-4 rounded-full'
         
