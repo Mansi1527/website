@@ -25,9 +25,7 @@ const ques = () => {
         textShadow:"0px 0px 8px rgb(255,255,255)",
         boxShadow:"0px 0px 8px rgb(255,255,255)",
         transition:{
-            repeat:Infinity,
-            repeatType:"reverse",
-            duration:0.4
+           
         }
     },
     
@@ -59,6 +57,7 @@ const buttonVariants2={
       animate="animate"
       initial="hidden"
       whileHover="hover"
+      transition={{}}
       className='p-2'
       >Yes</motion.button>
       </Link>

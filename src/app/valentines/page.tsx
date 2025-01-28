@@ -17,9 +17,7 @@ const page = () => {
           textShadow:"0px 0px 8px rgb(255,255,255)",
           boxShadow:"0px 0px 8px rgb(255,255,255)",
           transition:{
-              repeat:Infinity,
-              repeatType:"reverse",
-              duration:0.4
+              
           }
       },
       
@@ -35,13 +33,7 @@ const page = () => {
       x: "-50vw",  // Moves to the left off-screen (left-most)
          // Moves to the top of the screen (top-most)
   
-      transition: {
-        type: "tween",
-        damping:25,
-        stiffness:100,   // smoothens the stop
-        duration: 0.1,    // controls the duration
-         // reverse the animation after it completes
-      },
+     
     },
   };
 
@@ -54,11 +46,7 @@ const page = () => {
     visible:{
       scale:1.1,
       opacity:1,
-      transition:{
-        repeat:Infinity,
-        repeatType:"reverse",
-        duration:0.4
-      }
+      
     }
 
   }
@@ -70,6 +58,11 @@ const page = () => {
      variants={zoom}
      initial="hidden"
      animate="visible"
+     transition={{
+      repeat:Infinity,
+      repeatType:"reverse",
+      duration:0.4
+     }}
 
      className="underline text-red-500 ">Valentine?</motion.span></motion.h1>
         <div className='flex gap-20 mt-20'>
@@ -79,6 +72,10 @@ const page = () => {
         initial="hidden"
         animate="animate"
         whileHover="hover"
+        transition={{
+          repeat:Infinity,
+          repeatType:"reverse",
+          duration:0.4}}
         className='bg-gradient-to-br text-black from-pink-200 via-white to-pink-500 p-2 rounded-full'
         >yes</motion.button>
         </Link>
@@ -88,6 +85,11 @@ variants={buttonVariants2}
 initial="hidden"
 animate="animate"
 whileHover="hover"
+transition={{
+  type: "tween",
+  damping:25,
+  stiffness:100,   // smoothens the stop
+  duration: 0.1, }}
 className='bg-red-500 p-3 rounded-full'
         >No</motion.button>
         </div>
